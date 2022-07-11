@@ -21,7 +21,7 @@ metadata:
 data:
   username: bXktYXBw
   password: Mzk1MjgkdmRnN0pi
-  EOF
+EOF
 ```{{exec}}
 
 Create the Secret
