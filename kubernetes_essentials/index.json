@@ -7,8 +7,8 @@
     },
     "steps": [
       {
-        "title": "List all pods",
-        "text": "step1.md"
+        "title": "Inject a Secrets in the k8s deployment",
+        "text": "secrets.md"
       }
     ],
     "finish": {
