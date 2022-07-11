@@ -1,6 +1,6 @@
 {
   "title": "Kubernetes Essentials",
-  "description": "Use a simple one node Kubernetes cluster and let user list all pods",
+  "description": "Basic Kubernetes concepts which are needed in day to day operations.",
   "details": {
     "intro": {
       "text": "intro.md"
