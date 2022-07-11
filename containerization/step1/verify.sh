@@ -1,4 +1,4 @@
 #!/bin/bash
 
 stat ~/scenarios/hello-world/Dockerfile
-docker images | grep helloworld | wc -l 
+docker images helloworld:v1.0

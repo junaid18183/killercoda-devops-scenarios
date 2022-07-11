@@ -31,6 +31,9 @@ Build the dockerimage image for verification purposes
 
 ```plain
 docker build --tag helloworld:v1.0 .
+```{{exec}}
+
+```plain
 docker images | grep helloworld
 ```{{exec}}
 
@@ -38,4 +41,10 @@ Run the container from the image
 
 ```plain
 docker run --rm helloworld:v1.0
+```{{exec}}
+
+Remmove the built image
+
+```plain
+docker rmi helloworld:v1.0
 ```{{exec}}

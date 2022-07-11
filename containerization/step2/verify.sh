@@ -1,3 +1,4 @@
 #!/bin/bash
 
-cat /etc/my-second-file | grep amazing
+state ~/scenarios/multistage-example/Dockerfile
+docker images | grep helloworld

@@ -1,3 +1,6 @@
-Learn to build the containr images using docker.
-Understand the difference between single stage and multistage build.
-You will also understand the value of using `multistage builds` using the `distroless` as a base images.
+<h1>Goal</h1>
+<ul>
+<li>This scenario will help you understand and create a Container image using a multistage build process. </li>
+<li>You will build a distroless as a base image and understand that is light weight. </li>
+<li>You will also understand the value of using multistage builds using the distroless as a base images.</li>
+</ul>
