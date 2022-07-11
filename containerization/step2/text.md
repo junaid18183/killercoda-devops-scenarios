@@ -41,11 +41,6 @@ create a blank go.mod file using command
 go mod init example.com/m/v2
 ```{{exec}}
 
-create a blank go.mod file using command
-```plain
-go mod init example.com/m/v2
-```{{exec}}
-
 create a Dockerfile as below
 ```plain
 cat <<EOF > Dockerfile
@@ -56,7 +51,7 @@ ADD . /build/
 WORKDIR /build
 RUN go mod download
 RUN go build -o /hello
-ENTRYPOINT ["/root/hello"]
+ENTRYPOINT ["/hello"]
 EOF
 ```{{exec}}
 
@@ -75,9 +70,10 @@ Now, lets see the size of the image built
 docker images | grep helloworld
 ```{{exec}}
 <br>
-<h2>Improve the image with multistage builds<h2>
-  The multistage image build helps reduce the image size leads to reduce the build time, upload/download, and storage costs. This also helps in security posture as your final image has only runtime dependancies and no other packages other than that.<p>
-  Let’s improve our Dockerfile to add second stage build and copy the built program from first stage to second stage. We will use the ubi-micro as our base image in second stage<p>
+<h2>Improve the image with multistage builds</h2>
+<h3>
+The multistage image build helps reduce the image size leads to reduce the build time, upload/download, and storage costs. This also helps in security posture as your final image has only runtime dependancies and no other packages other than that.<p>
+Let’s improve our Dockerfile to add second stage build and copy the built program from first stage to second stage. We will use the ubi-micro as our base image in second stage<p></h3>
 
 Update a Dockerfile as below, we will move the origianl Dockerfile as Dockerfile.v1
 ```plain
@@ -106,7 +102,7 @@ docker build --tag helloworld:v2.0 .
 
 You can run the built image as below 
 ```plain
-docker run helloworld:v1.0
+docker run helloworld:v2.0
 ```{{exec}}
 
 Now, lets see the size of the image built 
@@ -123,7 +119,7 @@ Here, we we are planning to use gcr.io/distroless/static as our base image. Plea
 
 Let's move out previosu Dockerfile as Dockerfile.v2 and update it.
 ```plain
-mv Dockerfile Dockerfile.v1
+mv Dockerfile Dockerfile.v2
 cat <<EOF > Dockerfile
 FROM golang:1.17-alpine as build
 
@@ -148,7 +144,7 @@ docker build --tag helloworld:v3.0 .
 
 You can run the built image as below 
 ```plain
-docker run helloworld:v1.0
+docker run helloworld:v3.0
 ```{{exec}}
 
 Now, lets see the size of the image built 
