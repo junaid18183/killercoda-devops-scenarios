@@ -1,0 +1,7 @@
+{
+    "items": [
+      { "path": "containerization" },
+      { "path": "kubernetes_essentials" },
+      { "path": "istio" }
+    ]
+  }
