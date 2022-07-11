@@ -1,6 +1,6 @@
 {
   "title": "Containerization",
-  "description": "Let's learn about creating Container image creation",
+  "description": "Let's learn about creating Container images.",
   "details": {
     "intro": {
       "text": "intro.md",
